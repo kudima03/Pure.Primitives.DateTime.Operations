@@ -37,6 +37,7 @@ public sealed record AfterConditionTests
 
         IBool equality = new AfterCondition(
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
+            new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 1, 2))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 2, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 2, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 2, 1, 1, 1))),
