@@ -41,7 +41,7 @@ public sealed record AfterConditionTests
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 2, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 2, 1, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(2, 1, 1, 1, 1))),
-            
+
             new DateTime(new Date.Date(new DateOnly(2000, 1, 2)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
             new DateTime(new Date.Date(new DateOnly(2000, 2, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
             new DateTime(new Date.Date(new DateOnly(2000, 3, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
@@ -62,7 +62,7 @@ public sealed record AfterConditionTests
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 2, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 2, 1, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(2, 1, 1, 1, 1))),
-            
+
             new DateTime(new Date.Date(new DateOnly(2000, 1, 2)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
             new DateTime(new Date.Date(new DateOnly(2000, 2, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
             new DateTime(new Date.Date(new DateOnly(2000, 3, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
