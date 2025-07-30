@@ -9,9 +9,7 @@ public sealed record BeforeCondition : IBool
 
     private readonly IEnumerable<IDateTime> _values;
 
-    public BeforeCondition(params IDateTime[] values) : this(values.AsReadOnly()) { }
-
-    public BeforeCondition(IEnumerable<IDateTime> values) : this(values, new DateTimeComparer()) { }
+    public BeforeCondition(params IEnumerable<IDateTime> values) : this(values, new DateTimeComparer()) { }
 
     private BeforeCondition(IEnumerable<IDateTime> values, IComparer<IDateTime> comparer)
     {

@@ -9,9 +9,7 @@ public sealed record AfterCondition : IBool
 
     private readonly IEnumerable<IDateTime> _values;
 
-    public AfterCondition(params IDateTime[] values) : this(values.AsReadOnly()) { }
-
-    public AfterCondition(IEnumerable<IDateTime> values) : this(values, new DateTimeComparer()) { }
+    public AfterCondition(params IEnumerable<IDateTime> values) : this(values, new DateTimeComparer()) { }
 
     private AfterCondition(IEnumerable<IDateTime> values, IComparer<IDateTime> comparer)
     {

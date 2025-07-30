@@ -7,9 +7,7 @@ public sealed record EqualCondition : IBool
 {
     private readonly IEnumerable<IDateTime> _values;
 
-    public EqualCondition(params IDateTime[] values) : this(values.AsReadOnly()) { }
-
-    public EqualCondition(IEnumerable<IDateTime> values)
+    public EqualCondition(params IEnumerable<IDateTime> values)
     {
         _values = values;
     }
