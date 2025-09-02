@@ -1,4 +1,4 @@
-﻿using Pure.Primitives.Abstractions.Bool;
+using Pure.Primitives.Abstractions.Bool;
 using Pure.Primitives.Abstractions.Date;
 using Pure.Primitives.Date;
 using Pure.Primitives.Random.DateTime;
@@ -15,7 +15,8 @@ public sealed record BeforeConditionTests
             new DateTime(new CurrentDate()),
             new DateTime(new CurrentDate()),
             new DateTime(new CurrentDate()),
-            new DateTime(new CurrentDate()));
+            new DateTime(new CurrentDate())
+        );
 
         Assert.False(equality.BoolValue);
     }
@@ -25,7 +26,8 @@ public sealed record BeforeConditionTests
     {
         IBool equality = new BeforeCondition(
             new DateTime(new CurrentDate()),
-            new DateTime(new CurrentDate()));
+            new DateTime(new CurrentDate())
+        );
 
         Assert.False(equality.BoolValue);
     }
@@ -42,12 +44,27 @@ public sealed record BeforeConditionTests
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 2, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 2, 1, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(2, 1, 1, 1, 1))),
-
-            new DateTime(new Date.Date(new DateOnly(2000, 1, 2)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 2, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 3, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2001, 1, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2002, 1, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))));
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 1, 2)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 2, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 3, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2001, 1, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2002, 1, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            )
+        );
 
         Assert.False(equality.BoolValue);
     }
@@ -64,13 +81,31 @@ public sealed record BeforeConditionTests
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 2, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 2, 1, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(2, 1, 1, 1, 1))),
-
-            new DateTime(new Date.Date(new DateOnly(2000, 1, 2)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 2, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 3, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2001, 1, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2002, 1, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2002, 1, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))));
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 1, 2)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 2, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 3, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2001, 1, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2002, 1, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2002, 1, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            )
+        );
 
         Assert.False(equality.BoolValue);
     }
@@ -81,17 +116,32 @@ public sealed record BeforeConditionTests
         IDate date = new Date.Date(new DateOnly(2000, 1, 1));
 
         IBool equality = new BeforeCondition(
-            new DateTime(new Date.Date(new DateOnly(2002, 1, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2001, 1, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 3, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 2, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 1, 2)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-
+            new DateTime(
+                new Date.Date(new DateOnly(2002, 1, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2001, 1, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 3, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 2, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 1, 2)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
             new DateTime(date, new Time.Time(new TimeOnly(2, 1, 1, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 2, 1, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 2, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 2, 1))),
-            new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 1, 1))));
+            new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 1, 1)))
+        );
 
         Assert.True(equality.BoolValue);
     }
@@ -102,18 +152,33 @@ public sealed record BeforeConditionTests
         IDate date = new Date.Date(new DateOnly(2000, 1, 1));
 
         IBool equality = new BeforeCondition(
-            new DateTime(new Date.Date(new DateOnly(2002, 1, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2001, 1, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 3, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 2, 1)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(new Date.Date(new DateOnly(2000, 1, 2)), new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-
+            new DateTime(
+                new Date.Date(new DateOnly(2002, 1, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2001, 1, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 3, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 2, 1)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
+            new DateTime(
+                new Date.Date(new DateOnly(2000, 1, 2)),
+                new Time.Time(new TimeOnly(1, 1, 1, 1, 1))
+            ),
             new DateTime(date, new Time.Time(new TimeOnly(2, 1, 1, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 2, 1, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 2, 1, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 2, 1))),
             new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 1, 1))),
-            new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 1, 1))));
+            new DateTime(date, new Time.Time(new TimeOnly(1, 1, 1, 1, 1)))
+        );
 
         Assert.False(equality.BoolValue);
     }
@@ -129,18 +194,22 @@ public sealed record BeforeConditionTests
     public void ThrowsExceptionOnEmptyArguments()
     {
         IBool equality = new BeforeCondition();
-        Assert.Throws<ArgumentException>(() => equality.BoolValue);
+        _ = Assert.Throws<ArgumentException>(() => equality.BoolValue);
     }
 
     [Fact]
     public void ThrowsExceptionOnGetHashCode()
     {
-        Assert.Throws<NotSupportedException>(() => new BeforeCondition(new RandomDateTime()).GetHashCode());
+        _ = Assert.Throws<NotSupportedException>(() =>
+            new BeforeCondition(new RandomDateTime()).GetHashCode()
+        );
     }
 
     [Fact]
     public void ThrowsExceptionOnToString()
     {
-        Assert.Throws<NotSupportedException>(() => new BeforeCondition(new RandomDateTime()).ToString());
+        _ = Assert.Throws<NotSupportedException>(() =>
+            new BeforeCondition(new RandomDateTime()).ToString()
+        );
     }
 }

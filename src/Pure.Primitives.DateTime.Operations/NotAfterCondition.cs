@@ -1,4 +1,4 @@
-﻿using Pure.Primitives.Abstractions.Bool;
+using Pure.Primitives.Abstractions.Bool;
 using Pure.Primitives.Abstractions.DateTime;
 
 namespace Pure.Primitives.DateTime.Operations;
@@ -9,9 +9,13 @@ public sealed record NotAfterCondition : IBool
 
     private readonly IEnumerable<IDateTime> _values;
 
-    public NotAfterCondition(params IEnumerable<IDateTime> values) : this(values, new DateTimeComparer()) { }
+    public NotAfterCondition(params IEnumerable<IDateTime> values)
+        : this(values, new DateTimeComparer()) { }
 
-    private NotAfterCondition(IEnumerable<IDateTime> values, IComparer<IDateTime> comparer)
+    private NotAfterCondition(
+        IEnumerable<IDateTime> values,
+        IComparer<IDateTime> comparer
+    )
     {
         _values = values;
         _comparer = comparer;
