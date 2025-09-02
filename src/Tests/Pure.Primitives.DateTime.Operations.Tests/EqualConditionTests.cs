@@ -1,4 +1,4 @@
-﻿using Pure.Primitives.Abstractions.Bool;
+using Pure.Primitives.Abstractions.Bool;
 using Pure.Primitives.Abstractions.Time;
 using Pure.Primitives.Date;
 using Pure.Primitives.Number;
@@ -20,7 +20,8 @@ public sealed record EqualConditionTests
             new DateTime(new CurrentDate(), currentTime),
             new DateTime(new CurrentDate(), currentTime),
             new DateTime(new CurrentDate(), currentTime),
-            new DateTime(new CurrentDate(), currentTime));
+            new DateTime(new CurrentDate(), currentTime)
+        );
 
         Assert.True(equality.BoolValue);
     }
@@ -30,7 +31,8 @@ public sealed record EqualConditionTests
     {
         IBool equality = new EqualCondition(
             new DateTime(new CurrentDate()),
-            new DateTime(new CurrentDate()));
+            new DateTime(new CurrentDate())
+        );
 
         Assert.True(equality.BoolValue);
     }
@@ -53,7 +55,8 @@ public sealed record EqualConditionTests
             new DateTime(new CurrentDate(), currentTime),
             new DateTime(new CurrentDate(), currentTime),
             new DateTime(new CurrentDate(), currentTime),
-            new RandomDateTime());
+            new RandomDateTime()
+        );
 
         Assert.False(equality.BoolValue);
     }
@@ -69,18 +72,22 @@ public sealed record EqualConditionTests
     public void ThrowsExceptionOnEmptyArguments()
     {
         IBool equality = new EqualCondition();
-        Assert.Throws<ArgumentException>(() => equality.BoolValue);
+        _ = Assert.Throws<ArgumentException>(() => equality.BoolValue);
     }
 
     [Fact]
     public void ThrowsExceptionOnGetHashCode()
     {
-        Assert.Throws<NotSupportedException>(() => new EqualCondition(new RandomDateTime()).GetHashCode());
+        _ = Assert.Throws<NotSupportedException>(() =>
+            new EqualCondition(new RandomDateTime()).GetHashCode()
+        );
     }
 
     [Fact]
     public void ThrowsExceptionOnToString()
     {
-        Assert.Throws<NotSupportedException>(() => new EqualCondition(new RandomDateTime()).ToString());
+        _ = Assert.Throws<NotSupportedException>(() =>
+            new EqualCondition(new RandomDateTime()).ToString()
+        );
     }
 }

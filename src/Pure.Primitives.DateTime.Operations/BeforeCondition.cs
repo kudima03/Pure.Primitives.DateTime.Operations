@@ -1,4 +1,4 @@
-﻿using Pure.Primitives.Abstractions.Bool;
+using Pure.Primitives.Abstractions.Bool;
 using Pure.Primitives.Abstractions.DateTime;
 
 namespace Pure.Primitives.DateTime.Operations;
@@ -9,7 +9,8 @@ public sealed record BeforeCondition : IBool
 
     private readonly IEnumerable<IDateTime> _values;
 
-    public BeforeCondition(params IEnumerable<IDateTime> values) : this(values, new DateTimeComparer()) { }
+    public BeforeCondition(params IEnumerable<IDateTime> values)
+        : this(values, new DateTimeComparer()) { }
 
     private BeforeCondition(IEnumerable<IDateTime> values, IComparer<IDateTime> comparer)
     {
