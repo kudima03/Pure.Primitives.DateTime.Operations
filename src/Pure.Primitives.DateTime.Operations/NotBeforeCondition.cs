@@ -21,7 +21,7 @@ public sealed record NotBeforeCondition : IBool
         _comparer = comparer;
     }
 
-    bool IBool.BoolValue
+    public bool BoolValue
     {
         get
         {

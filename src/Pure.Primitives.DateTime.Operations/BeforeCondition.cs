@@ -18,7 +18,7 @@ public sealed record BeforeCondition : IBool
         _comparer = comparer;
     }
 
-    bool IBool.BoolValue
+    public bool BoolValue
     {
         get
         {
