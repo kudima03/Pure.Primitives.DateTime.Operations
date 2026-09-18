@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/Pure.Primitives.DateTime.Operations.Tests/Pure.Primitives.DateTime.Operations.Tests.csproj" />
+  </Folder>
+  <Project Path="Pure.Primitives.DateTime.Operations/Pure.Primitives.DateTime.Operations.csproj" />
+</Solution>
