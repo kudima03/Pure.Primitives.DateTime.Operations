@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [0.5.0] — 2026-11-11
+
+### Added
+- `net11.0` target framework.
+
+### Changed
+- Depends on `Pure.Primitives.Abstractions` 4.4.0 (the .NET 11 release).
+- Assembly version is now derived from the release tag.
+- NuGet package now includes `README.md`.
+
+---
+
 ## [0.4.0] — 2025-11-23
 
 ### Changed
