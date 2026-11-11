@@ -36,9 +36,9 @@ All six types implement `IBool` from `Pure.Primitives.Abstractions` and accept `
 
 **Dependency on `Pure.Primitives.Abstractions`:** the library consumes `IBool`, `IDateTime` (which composes `IDate` and `ITime`), and their `INumber<ushort>` fields. No concrete implementations are shipped here.
 
-**Multi-targeting:** `net7.0`, `net8.0`, `net9.0`, `net10.0`. `IsAotCompatible = true` — no reflection.
+**Multi-targeting:** `net7.0`, `net8.0`, `net9.0`, `net10.0`, `net11.0`. `IsAotCompatible = true` — no reflection.
 
-**Test project:** `Pure.Primitives.DateTime.Operations.Tests` targets `net10.0` only and uses xUnit with 98% coverage enforcement.
+**Test project:** `Pure.Primitives.DateTime.Operations.Tests` targets `net11.0` only and uses xUnit with 98% coverage enforcement.
 
 **Publishing:** triggered automatically by pushing a semver tag (e.g., `git tag 1.2.3 && git push origin 1.2.3`). The tag becomes the `PackageVersion`. Publishes to both GitHub Packages and NuGet.org.
 
